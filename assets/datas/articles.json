@@ -1,0 +1,372 @@
+{
+  "fr": [
+    {
+      "id": 1,
+      "title": "Nouveau projet - Mobilité végétale autonome",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-03-24T23:00:00.000Z",
+      "layout": "full",
+      "text": "L'idée est de concevoir un robot autonome permettant à une plante de se déplacer de manière indépendante vers une source de lumière. L'initiative découle d'une observation pratique concernant l'ensoleillement suboptimal des plantes en intérieur, nécessitant des déplacements manuels fréquents (en tout cas chez moi...). L'objectif est de développer une solution robotique fonctionnelle et stylée qui offre à la plante une capacité de mouvement autonome, histoire qu'elle ne reste pas \"plantée\" au même endroit."
+    },
+    {
+      "id": 2,
+      "title": "Premiers tests avec la photorésistance : where's the light ?",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-04-01T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/module_photoresistance.jpg",
+        "format": "portrait"
+      },
+      "text": "Les premiers tests avec le module photorésistance sont concluants et j'ai pu récupérer une bonne quantité de données. \n\nL'idée est simple mais efficace : pour que notre plante sache où aller chercher la lumière, le robot va prendre trois mesures de luminosité à trois angles différents. Concrètement, ça signifie qu'il lira la lumière \"tout droit\", \"à gauche\" et \"à droite\". En comparant ces trois valeurs, le robot pourra déterminer la direction la plus lumineuse et ajuster son déplacement en conséquence. C'est un peu comme si notre plante-robot tournait la tête pour trouver le meilleur spot.\n"
+    },
+    {
+      "id": 3,
+      "title": "2 ou 3 servos par articulation ?",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-04-08T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/3servos_leg.mp4",
+        "format": "rectangle"
+      },
+      "text": "L'objectif initial est de conserver un design le plus simple possible en utilisant seulement deux servomoteurs par patte. Ça réduit le poids, la complexité du câblage et le coût.\n\nMais pour explorer les possibilités, quelques tests avec une configuration à trois servomoteurs par patte : deux servos gèrent la \"hanche\" (couvrant deux angles de rotation), et un troisième servo fait la liaison \"fémur-tibia\". Ce qui offre quand même plus de mobilité et permet de descendre le centre de gravité pour une meilleure stabilité."
+    },
+    {
+      "id": 4,
+      "title": "Prototypage",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-04-20T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/beta_robot_plant.jpg",
+        "format": "rectangle"
+      },
+      "text": "La première étape du projet consiste en la création d'un prototype en carton. Cette phase permet de tester les principes mécaniques fondamentaux, d'évaluer le gabarit du robot, et de développer le code initial dans un environnement de faible coût et rapide.\r\n\r\nLes capteurs clés pour la navigation et l'interaction avec l'environnement sont :\r\n\r\n- Photorésistance : Ce module détectera les niveaux de luminosité ambiante. L'information recueillie sera utilisée pour déterminer la direction de la source lumineuse et orienter le déplacement du robot en conséquence.\r\n- Capteur à ultrasons HC-SR04 : Ce capteur mesurera la distance aux obstacles en émettant des ultrasons et en calculant le temps de retour de l'écho. Il est essentiel pour la détection d'obstacles et la prévention des collisions.\r\n\r\nLe mouvement sera assuré par quatre servomoteurs SG90 180 degrés. Ces servomoteurs actionneront les quatre pattes articulées du robot, chacune étant conçue avec des articulations simulant une hanche et une rotule. Bien que le couple de ces servomoteurs soit limité, ce qui restreindra la vitesse et la charge utile (le poids de la plante), ils sont suffisants pour les déplacements lents et contrôlés nécessaires à ce projet."
+    },
+    {
+      "id": 5,
+      "title": "Châssis découpé ",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-04-25T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/frame_robot_plant.jpg",
+        "format": "rectangle"
+      },
+      "text": "Le châssis du robot pour plantes est terminé ! Pour cette étape, la Dremel est l'outil parfait : une découpe précise et à peu prêt nette du plastique, tout ce qu'on aime. L'épaisseur et la rigidité du matériau sont importantes à considérer pour supporter le poids de la plante et des composants électroniques. Après plusieurs essais, la meilleurs option était une vieille boîte en plastique : même abîmée, j'ai pu récupérer une section suffisamment épaisse poru un avoir quelque chose de solide.\r\n\r\nProchaine étape : l'assemblage des pattes et l'intégration de toute l'électronique !",
+      "download": {
+        "url": "https://github.com/MarinaXP/LegsDayProject-PlantsEdition/blob/14770e5b5dd6bb3246399408cfe04ad0a832e10e/template/frame_design_template.pdf",
+        "text": "Voir le template"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Le robot marche... vite fait...",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-05-03T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/first_walk.mp4",
+        "format": "rectangle"
+      },
+      "text": "Pour l'instant, le robot ressemble plus à Bambi qui vient de naître... Clairement, nous avons atteint une limite physique importante pour ce projet, du moins avec la configuration actuelle. La stabilité laisse clairement à désirer...Il faudra prévoir un petit ajout pour l'aider à tenir debout. \nLe code de cette V1 est disponible sur GitHub pour vous inspirer : ",
+      "cta": {
+        "url": "https://github.com/MarinaXP/LegsDayProject-PlantsEdition",
+        "text": "Voir le repo"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Plus de stabilité ",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-05-07T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/stability_issue.png",
+        "format": "rectangle"
+      },
+      "text": "Pour cette V1, l'idée est simple et efficace : on va lui appliquer le principe de la draisienne. Comme un enfant encore en apprentissage, on va lui ajouter un support qui l'aidera à garder l'équilibre sans pour autant l'empêcher de s'entraîner à marcher avec ses pattes. Ça nous permettra de continuer les tests sur la locomotion sans que le robot ne s'écroule à chaque pas. C'est un petit ajout, mais il devrait faire la  différence pour lui donner un peu plus d'assurance sur ses \"pieds\" !"
+    },
+    {
+      "id": 8,
+      "title": "Le robot plante marche moins vite qu'une limace (c'est con pour une plante)",
+      "tags": [
+        "Legs Day Project - Edition Plante"
+      ],
+      "date": "2025-05-15T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/second_walk.mp4",
+        "format": "rectangle"
+      },
+      "text": "Le robot plante se déplace à 0,0024 km/h, compliqué de lui faire atteindre la baie vitrée avant la nuit.\r\n\r\nC'est la fin de cette version 1. Elle a validé pas mal de choses pour moi, et j'y ai compris des principes essentiels (comme le manque de puissance des servos SG90).\r\n\r\nJe réfléchis déjà à une version 2 avec des moteurs dotés de plus de couple, mais on part sur des besoins en alimentation supérieurs, avec régulateur et autre on part sur un autre niveau de complexité."
+    },
+    {
+      "id": 9,
+      "title": "Nouvelle idée = nouveau projet ",
+      "tags": [
+        "2 mains gauche"
+      ],
+      "date": "2025-06-16T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/cardboard_hand.jpg",
+        "format": "rectangle"
+      },
+      "text": "L'objectif est de créer une deuxième main gauche robotique, que je pourrai contrôler avec ma main droite, histoire de prétendre être ambidextre. Pour ce premier prototype, on va se concentrer sur le contrôle des doigts pour les mouvements de flexion et d'extension. L'idée est de commencer à exploiter la vision par ordinateur : en analysant les mouvements de la main droite, nous pourrons piloter les doigts de cette nouvelle main robotique.\n\nComme d'habitude, la première étape est une version bêta en carton. Ça permet de vérifier deux ou trois principes clés et de nous poser les questions nécessaires avant d'aller plus loin : Quelle taille idéale pour les doigts ? Comment les articulations vont-elles se plier ? Quelle force sera nécessaire pour les mouvements de flexion/extension ? Comment intégrer les futurs actionneurs sans gêner le mouvement ?"
+    },
+    {
+      "id": 10,
+      "title": "Prototypage en cours",
+      "tags": [
+        "2 mains gauche"
+      ],
+      "date": "2025-07-01T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/proto1_hand.jpg",
+        "format": "portrait"
+      },
+      "text": "Le prototypage de la main avance, avec un gros focus sur les articulations des phalanges. Deux approches en cours d'exploration : comme sur la photo, les articulations \"os par os\" (plus réalistes mais complexes à contrôler) et l'enveloppe \"peau\" solidaire. Pour l'instant, c'est la dernière qui est privilégiée : un câble tire sur l'extrémité du doigt, pliant l'ensemble. C'est plus simple en fabrication et en contrôle pour obtenir une flexion/extension fluide."
+    },
+    {
+      "id": 11,
+      "title": "Calibrage",
+      "tags": [
+        "2 mains gauche"
+      ],
+      "date": "2025-07-14T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/calibrage_hand.jpg",
+        "format": "rectangle"
+      },
+      "text": "Les premiers tests de calibrage de la main sont en cours. L'approche : il ne faut pas chercher à tout faire bouger en même temps, mais plutôt temporiser chaque mouvement avec quelques millisecondes d'intervalle pour éviter les surcharges. \r\n\r\nVoici à ce stade comment j'envisage la détection des mouvements de la main humaine: nous vérifions si le bout de chaque doigt se rapproche d'un point central situé à la base de la main. Si ce mouvement est détecté pour un doigt, alors le servomoteur correspondant sur la main robotique est activé en conséquence pour en simuler la flexion."
+    },
+    {
+      "id": 12,
+      "title": "La v1 est terminée, je vais pouvoir me gratter le dos comme personne",
+      "tags": [
+        "2 mains gauche"
+      ],
+      "date": "2025-07-17T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/test_hand.mp4",
+        "format": "rectangle"
+      },
+      "text": "Le contrôle des doigts est nickel, la main répond parfaitement aux commandes. Je suis forcément limité pour cette V1 par le manque de souplesse dans les mouvements. C'est un aspect purement mécanique, à traiter dans la V2, via probablement un mécanisme delta déporté ou une autre approche du positionnement et du mécanisme d'action des servos pour gagner en fluidité. Je releaserai bientôt le code sur GitHub."
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "title": "New Project - Autonomous Plant Mobility",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-03-24T23:00:00.000Z",
+      "layout": "full",
+      "text": "The idea is to design an autonomous robot that allows a plant to move independently towards a light source. The initiative stems from a practical observation concerning the suboptimal sunlight for indoor plants, requiring frequent manual relocation (at least in my house...). The goal is to develop a functional and stylish robotic solution that gives the plant autonomous movement, so it doesn't stay \"planted\" in the same spot."
+    },
+    {
+      "id": 2,
+      "title": "First tests with the photoresistor: where's the light?",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-04-01T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/module_photoresistance.jpg",
+        "format": "portrait"
+      },
+      "text": "The first tests with the photoresistor module are conclusive, and I was able to collect a good amount of data.\n\nThe idea is simple but effective: for our plant to know where to find light, the robot will take three brightness measurements at three different angles. Specifically, it will read the light \"straight ahead,\" \"to the left,\" and \"to the right.\" By comparing these three values, the robot can determine the brightest direction and adjust its movement accordingly. It's a bit like our plant-robot turning its head to find the best spot."
+    },
+    {
+      "id": 3,
+      "title": "2 or 3 servos per joint?",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-04-08T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/3servos_leg.mp4",
+        "format": "rectangle"
+      },
+      "text": "The initial goal is to keep the design as simple as possible by using only two servo motors per leg. This reduces weight, wiring complexity, and cost.\r\n\r\nBut to explore the possibilities, I ran some tests with a three-servo-per-leg configuration: two servos manage the \"hip\" (covering two angles of rotation), and a third servo acts as the \"femur-tibia\" link. This offers more mobility and allows for lowering the center of gravity for better stability."
+    },
+    {
+      "id": 4,
+      "title": "Prototyping",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-04-20T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/beta_robot_plant.jpg",
+        "format": "rectangle"
+      },
+      "text": "The first stage of the project involves creating a cardboard prototype. This phase allows for testing fundamental mechanical principles, evaluating the robot's size, and developing the initial code in a low-cost and rapid environment.\r\n\r\nThe key sensors for navigation and environmental interaction are:\r\n\r\nPhotoresistor: This module will detect ambient light levels. The collected information will be used to determine the direction of the light source and guide the robot's movement accordingly.\r\n\r\nHC-SR04 Ultrasonic Sensor: This sensor will measure the distance to obstacles by emitting ultrasonic waves and calculating the echo's return time. It is essential for obstacle detection and collision avoidance.\r\n\r\nMovement will be provided by four SG90 180-degree servo motors. These servos will actuate the robot's four articulated legs, each designed with joints simulating a hip and a knee. Although the torque of these servos is limited, which will restrict the speed and payload (the plant's weight), they are sufficient for the slow, controlled movements required for this project.\r\n\r"
+    },
+    {
+      "id": 5,
+      "title": "Frame cut out!",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-04-25T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/frame_robot_plant.jpg",
+        "format": "rectangle"
+      },
+      "text": "The frame for the plant robot is finished! For this step, the Dremel is the perfect tool: a precise and pretty clean cut in the plastic, just what we like. The thickness and rigidity of the material are important considerations to support the weight of the plant and electronic components. After several attempts, the best option was an old plastic box: even though it was damaged, I was able to salvage a section thick enough to have something solid.\n\nNext step: assembling the legs and integrating all the electronics!\n",
+      "download": {
+        "url": "https://github.com/MarinaXP/LegsDayProject-PlantsEdition/blob/14770e5b5dd6bb3246399408cfe04ad0a832e10e/template/frame_design_template.pdf",
+        "text": "Check the template"
+      }
+    },
+    {
+      "id": 6,
+      "title": "The robot walks...well almost",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-05-03T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/first_walk.mp4",
+        "format": "rectangle"
+      },
+      "text": "For now, the robot looks more like a newborn Bambi... However, it's clear that we have reached a significant physical limitation for this project, at least with the current setup. The stability is clearly lacking... A small addition will be needed to help it stand up.\r\nThe code for this V1 is available on GitHub to inspire you:",
+      "cta": {
+        "url": "https://github.com/MarinaXP/LegsDayProject-PlantsEdition",
+        "text": "Check the repo"
+      }
+    },
+    {
+      "id": 7,
+      "title": "More stability",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-05-07T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/stability_issue.png",
+        "format": "rectangle"
+      },
+      "text": "For this V1, the idea is simple and effective: we're going to apply the balance bike principle. Like a child still learning, we'll add a support to help it keep its balance without preventing it from practicing walking on its legs. This will allow us to continue locomotion tests without the robot collapsing at every step. It's a small addition, but it should make a difference in giving it a bit more confidence on its \"feet\"!\r\n"
+    },
+    {
+      "id": 8,
+      "title": "The plant robot walks slower than a slug (which is deeply unhealthy for a plant)",
+      "tags": [
+        "Legs Day Project - Plant Edition"
+      ],
+      "date": "2025-05-15T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/second_walk.mp4",
+        "format": "rectangle"
+      },
+      "text": "The plant robot moves at 0.0024 km/h, making it difficult for it to reach the bay window before nightfall.\r\n\r\nThis is the end of this version 1. It validated a lot of things for me, and I understood some essential principles (like the lack of power in SG90 servos).\r\n\r\nI am already thinking about a version 2 with motors that have more torque, but that will require more power, a regulator, and other things, taking it to another level of complexity.\r\n"
+    },
+    {
+      "id": 9,
+      "title": "New idea = new project\r\n",
+      "tags": [
+        "Second left hand"
+      ],
+      "date": "2025-06-16T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/cardboard_hand.jpg",
+        "format": "rectangle"
+      },
+      "text": "The goal is to create a second robotic left hand that I can control with my right hand, just to pretend to be ambidextrous. For this first prototype, we'll focus on controlling the fingers for flexion and extension movements. The idea is to start using computer vision: by analyzing the movements of the right hand, we can control the fingers of this new robotic hand.\r\n\r\nAs usual, the first step is a beta version in cardboard. This allows us to check a few key principles and ask the necessary questions before moving forward: What is the ideal size for the fingers? How will the joints bend? What force will be needed for flexion/extension movements? How can we integrate future actuators without hindering movement?"
+    },
+    {
+      "id": 10,
+      "title": "Prototyping in progress",
+      "tags": [
+        "Second left hand"
+      ],
+      "date": "2025-07-01T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/proto1_hand.jpg",
+        "format": "portrait"
+      },
+      "text": "\r\nThe hand prototyping is progressing, with a major focus on the phalangeal joints. Two approaches are being explored: as seen in the photo, \"bone-by-bone\" joints (more realistic but complex to control) and an integrated \"skin\" envelope. For now, the latter is preferred: a cable pulls on the fingertip, bending the entire assembly. It's simpler to manufacture and control for smooth flexion/extension.\r\n"
+    },
+    {
+      "id": 11,
+      "title": "Calibration",
+      "tags": [
+        "Second left hand"
+      ],
+      "date": "2025-07-14T22:00:00.000Z",
+      "layout": "right",
+      "media": {
+        "type": "image",
+        "src": "assets/medias/calibrage_hand.jpg",
+        "format": "rectangle"
+      },
+      "text": "The first calibration tests for the hand are underway. The approach: don't try to move everything at once, but rather stagger each movement with a few milliseconds delay to avoid overloads.\r\n\r\nAt this stage, here's how I envision detecting the human hand's movements: we check if each fingertip is moving towards a central point at the base of the hand. If this movement is detected for a finger, the corresponding servo motor on the robotic hand is activated accordingly to simulate its flexion.\r\n"
+    },
+    {
+      "id": 12,
+      "title": "V1 is done, I'll be able to scratch my back like no one else.",
+      "tags": [
+        "Second left hand"
+      ],
+      "date": "2025-07-17T22:00:00.000Z",
+      "layout": "left",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/test_hand.mp4",
+        "format": "rectangle"
+      },
+      "text": "The finger control is spot-on, the hand responds perfectly to commands. I am necessarily limited in this V1 by the lack of flexibility in the movements. This is a purely mechanical issue to be addressed in V2, probably via a remote delta mechanism or another approach to the positioning and action mechanism of the servos to gain fluidity. I will release the code on GitHub soon."
+    }
+  ]
+}
