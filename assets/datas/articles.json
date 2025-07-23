@@ -53,7 +53,7 @@
         "src": "assets/medias/beta_robot_plant.jpg",
         "format": "rectangle"
       },
-      "text": "La première étape du projet consiste en la création d'un prototype en carton. Cette phase permet de tester les principes mécaniques fondamentaux, d'évaluer le gabarit du robot, et de développer le code initial dans un environnement de faible coût et rapide.\r\n\r\nLes capteurs clés pour la navigation et l'interaction avec l'environnement sont :\r\n\r\n- Photorésistance : Ce module détectera les niveaux de luminosité ambiante. L'information recueillie sera utilisée pour déterminer la direction de la source lumineuse et orienter le déplacement du robot en conséquence.\r\n- Capteur à ultrasons HC-SR04 : Ce capteur mesurera la distance aux obstacles en émettant des ultrasons et en calculant le temps de retour de l'écho. Il est essentiel pour la détection d'obstacles et la prévention des collisions.\r\n\r\nLe mouvement sera assuré par quatre servomoteurs SG90 180 degrés. Ces servomoteurs actionneront les quatre pattes articulées du robot, chacune étant conçue avec des articulations simulant une hanche et une rotule. Bien que le couple de ces servomoteurs soit limité, ce qui restreindra la vitesse et la charge utile (le poids de la plante), ils sont suffisants pour les déplacements lents et contrôlés nécessaires à ce projet."
+      "text": "La première étape du projet c'est la création d'un prototype en carton. \n \nLes capteurs clés pour la navigation et l'interaction avec l'environnement sont : \n\n1) Photorésistance : Ce module détectera les niveaux de luminosité ambiante. L'information recueillie sera utilisée pour déterminer la direction de la source lumineuse et orienter le déplacement du robot en conséquence. \n2) Capteur à ultrasons HC-SR04 : Ce capteur mesurera la distance aux obstacles en émettant des ultrasons et en calculant le temps de retour de l'écho. Il est essentiel pour la détection d'obstacles et la prévention des collisions. \n\nLe mouvement sera assuré par huits servomoteurs SG90 180 degrés. Ces servomoteurs actionneront les quatre pattes articulées du robot, chacune conçue avec des articulations simulant une hanche et une rotule. Bien que le couple de ces servomoteurs soit limité, ce qui restreindra la vitesse et la charge utile (le poids de la plante), ils sont suffisants pour les déplacements lents et contrôlés nécessaires à ce projet."
     },
     {
       "id": 5,
@@ -68,7 +68,7 @@
         "src": "assets/medias/frame_robot_plant.jpg",
         "format": "rectangle"
       },
-      "text": "Le châssis du robot pour plantes est terminé ! Pour cette étape, la Dremel est l'outil parfait : une découpe précise et à peu prêt nette du plastique, tout ce qu'on aime. L'épaisseur et la rigidité du matériau sont importantes à considérer pour supporter le poids de la plante et des composants électroniques. Après plusieurs essais, la meilleurs option était une vieille boîte en plastique : même abîmée, j'ai pu récupérer une section suffisamment épaisse poru un avoir quelque chose de solide.\r\n\r\nProchaine étape : l'assemblage des pattes et l'intégration de toute l'électronique !",
+      "text": "Le châssis du robot pour plantes est terminé ! Pour cette étape la Dremel est l'outil parfait : une découpe précise et à peu prêt nette du plastique, tout ce qu'on aime. L'épaisseur et la rigidité du matériau sont importantes à considérer pour supporter le poids de la plante et des composants électroniques. Après plusieurs essais, la meilleurs option était une boîte en plastique : j'ai pu récupérer une section suffisamment épaisse pour un avoir quelque chose de solide.\n\nProchaine étape : l'assemblage des pattes et l'intégration de toute l'électronique !",
       "download": {
         "url": "https://github.com/MarinaXP/LegsDayProject-PlantsEdition/blob/14770e5b5dd6bb3246399408cfe04ad0a832e10e/template/frame_design_template.pdf",
         "text": "Voir le template"
@@ -118,7 +118,7 @@
       "layout": "left",
       "media": {
         "type": "video",
-        "src": "assets/medias/second_walk.mp4",
+        "src": "assets/medias/second_walk_1.mp4",
         "format": "rectangle"
       },
       "text": "Le robot plante se déplace à 0,0024 km/h, compliqué de lui faire atteindre la baie vitrée avant la nuit.\r\n\r\nC'est la fin de cette version 1. Elle a validé pas mal de choses pour moi, et j'y ai compris des principes essentiels (comme le manque de puissance des servos SG90).\r\n\r\nJe réfléchis déjà à une version 2 avec des moteurs dotés de plus de couple, mais on part sur des besoins en alimentation supérieurs, avec régulateur et autre on part sur un autre niveau de complexité."
@@ -193,7 +193,7 @@
       ],
       "date": "2025-03-24T23:00:00.000Z",
       "layout": "full",
-      "text": "The idea is to design an autonomous robot that allows a plant to move independently towards a light source. The initiative stems from a practical observation concerning the suboptimal sunlight for indoor plants, requiring frequent manual relocation (at least in my house...). The goal is to develop a functional and stylish robotic solution that gives the plant autonomous movement, so it doesn't stay \"planted\" in the same spot."
+      "text": "The idea is to design an autonomous robot that allows a plant to move independently towards a light source. The initiative stems from a practical observation concerning the suboptimal sunlight for indoor plants, requiring frequent manual relocation (at least in my house...). The goal is to develop a functional and stylish robotic solution that gives the plant autonomous movement, so it doesn't stay rooted in the same spot."
     },
     {
       "id": 2,
@@ -223,7 +223,7 @@
         "src": "assets/medias/3servos_leg.mp4",
         "format": "rectangle"
       },
-      "text": "The initial goal is to keep the design as simple as possible by using only two servo motors per leg. This reduces weight, wiring complexity, and cost.\r\n\r\nBut to explore the possibilities, I ran some tests with a three-servo-per-leg configuration: two servos manage the \"hip\" (covering two angles of rotation), and a third servo acts as the \"femur-tibia\" link. This offers more mobility and allows for lowering the center of gravity for better stability."
+      "text": "The initial goal is to keep the design as simple as possible by using only two servo motors per leg. This reduces weight, wiring complexity, and cost.\n\nBut to explore the possibilities, I ran some tests with a three-servo-per-leg configuration: two servos manage the \"hip\" (covering two angles of rotation), and a third servo acts as the \"femur-tibia\" link. This offers more mobility and allows for lowering the center of gravity for better stability."
     },
     {
       "id": 4,
@@ -238,7 +238,7 @@
         "src": "assets/medias/beta_robot_plant.jpg",
         "format": "rectangle"
       },
-      "text": "The first stage of the project involves creating a cardboard prototype. This phase allows for testing fundamental mechanical principles, evaluating the robot's size, and developing the initial code in a low-cost and rapid environment.\r\n\r\nThe key sensors for navigation and environmental interaction are:\r\n\r\nPhotoresistor: This module will detect ambient light levels. The collected information will be used to determine the direction of the light source and guide the robot's movement accordingly.\r\n\r\nHC-SR04 Ultrasonic Sensor: This sensor will measure the distance to obstacles by emitting ultrasonic waves and calculating the echo's return time. It is essential for obstacle detection and collision avoidance.\r\n\r\nMovement will be provided by four SG90 180-degree servo motors. These servos will actuate the robot's four articulated legs, each designed with joints simulating a hip and a knee. Although the torque of these servos is limited, which will restrict the speed and payload (the plant's weight), they are sufficient for the slow, controlled movements required for this project.\r\n\r"
+      "text": "The first stage of the project involves creating a cardboard prototype. \n\nThe key sensors for navigation and environmental interaction are: \n\n1) Photoresistor: This module will detect ambient light levels. The collected information will be used to determine the direction of the light source and guide the robot's movement accordingly. \n\n2) HC-SR04 Ultrasonic Sensor: This sensor will measure the distance to obstacles by emitting ultrasonic waves and calculating the echo's return time. It is essential for obstacle detection and collision avoidance. \n\nMovement will be provided by 8 SG90 180-degree servo motors. These servos will actuate the robot's four articulated legs, each designed with joints simulating a hip and a knee. Although the torque of these servos is limited, which will restrict the speed and payload (the plant's weight), they are sufficient for the slow, controlled movements required for this project.\n\n"
     },
     {
       "id": 5,
@@ -303,7 +303,7 @@
       "layout": "left",
       "media": {
         "type": "video",
-        "src": "assets/medias/second_walk.mp4",
+        "src": "assets/medias/second_walk_1.mp4",
         "format": "rectangle"
       },
       "text": "The plant robot moves at 0.0024 km/h, making it difficult for it to reach the bay window before nightfall.\r\n\r\nThis is the end of this version 1. It validated a lot of things for me, and I understood some essential principles (like the lack of power in SG90 servos).\r\n\r\nI am already thinking about a version 2 with motors that have more torque, but that will require more power, a regulator, and other things, taking it to another level of complexity.\r\n"
