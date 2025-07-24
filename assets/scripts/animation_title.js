@@ -207,6 +207,93 @@ window.addEventListener("load", () => {
     }, 1000);
 });
 
+
+
 // Surveillance du scroll/resize
 window.addEventListener("scroll", handleVisibilityChange);
 window.addEventListener("resize", handleVisibilityChange);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animScrollDiv = document.getElementById('anim_scroll');
+    if (!animScrollDiv) return; // Exit if the element isn't found
+
+    // Store the initial offsetTop (distance from the top of the document)
+    // This value tells us where the top of the div is when it's in its initial position.
+    const initialOffsetTop = animScrollDiv.offsetTop;
+
+    // We'll use this variable to track if the element is currently fixed or not.
+    let isFixed = false;
+
+    // Function to handle the scroll logic
+    function handleScroll() {
+        // Get the current scroll position from the top of the viewport
+        const scrollY = window.scrollY || window.pageYOffset;
+
+        // Check if the user has scrolled past the initial position of the div
+        if (scrollY > initialOffsetTop) {
+            // If we've scrolled past it AND it's not already fixed, make it fixed
+            if (!isFixed) {
+                animScrollDiv.classList.add('fixed-scroll');
+                isFixed = true;
+            }
+        } else {
+            // If we've scrolled back up and it IS fixed, revert it
+            if (isFixed) {
+                animScrollDiv.classList.remove('fixed-scroll');
+                isFixed = false;
+            }
+        }
+    }
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Call handleScroll once on load to ensure correct state if page is loaded
+    // with some initial scroll (e.g., refreshing after scrolling down)
+    handleScroll();
+});
+
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
+window.addEventListener("scroll", handleVisibilityChange);
+window.addEventListener("resize", handleVisibilityChange);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animScrollDiv = document.getElementById('anim_scroll');
+    if (!animScrollDiv) return;
+
+    const initialOffsetTop = animScrollDiv.offsetTop;
+    let isFixed = false;
+
+    function handleScroll() {
+        if (isMobile()) {
+            // Sur mobile, assurez-vous que la classe 'fixed-scroll' est retirée
+            // Le display: none du titre sera géré par le CSS.
+            if (animScrollDiv.classList.contains('fixed-scroll')) {
+                animScrollDiv.classList.remove('fixed-scroll');
+            }
+            return;
+        }
+
+        // Logique d'animation pour les écrans non mobiles (plus grands)
+        const scrollY = window.scrollY || window.pageYOffset;
+
+        if (scrollY > initialOffsetTop) {
+            if (!isFixed) {
+                animScrollDiv.classList.add('fixed-scroll');
+                isFixed = true;
+            }
+        } else {
+            if (isFixed) {
+                animScrollDiv.classList.remove('fixed-scroll');
+                isFixed = false;
+            }
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+});

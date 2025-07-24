@@ -6,6 +6,7 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-03-24T23:00:00.000Z",
       "layout": "full",
       "text": "L'idée est de concevoir un robot autonome permettant à une plante de se déplacer de manière indépendante vers une source de lumière. L'initiative découle d'une observation pratique concernant l'ensoleillement suboptimal des plantes en intérieur, nécessitant des déplacements manuels fréquents (en tout cas chez moi...). L'objectif est de développer une solution robotique fonctionnelle et stylée qui offre à la plante une capacité de mouvement autonome, histoire qu'elle ne reste pas \"plantée\" au même endroit."
@@ -16,8 +17,9 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-01T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/module_photoresistance.jpg",
@@ -31,8 +33,9 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-08T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "video",
         "src": "assets/medias/3servos_leg.mp4",
@@ -46,8 +49,9 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-20T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/beta_robot_plant.jpg",
@@ -61,8 +65,9 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-25T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/frame_robot_plant.jpg",
@@ -80,8 +85,9 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-05-03T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "video",
         "src": "assets/medias/first_walk.mp4",
@@ -99,8 +105,9 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-05-07T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/stability_issue.png",
@@ -114,8 +121,9 @@
       "tags": [
         "Legs Day Project - Edition Plante"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-05-15T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "video",
         "src": "assets/medias/second_walk_1.mp4",
@@ -129,8 +137,9 @@
       "tags": [
         "2 mains gauche"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-06-16T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/cardboard_hand.jpg",
@@ -144,8 +153,9 @@
       "tags": [
         "2 mains gauche"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-07-01T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/proto1_hand.jpg",
@@ -159,8 +169,9 @@
       "tags": [
         "2 mains gauche"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-07-14T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/calibrage_hand.jpg",
@@ -174,8 +185,9 @@
       "tags": [
         "2 mains gauche"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-07-17T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "video",
         "src": "assets/medias/test_hand.mp4",
@@ -191,6 +203,7 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-03-24T23:00:00.000Z",
       "layout": "full",
       "text": "The idea is to design an autonomous robot that allows a plant to move independently towards a light source. The initiative stems from a practical observation concerning the suboptimal sunlight for indoor plants, requiring frequent manual relocation (at least in my house...). The goal is to develop a functional and stylish robotic solution that gives the plant autonomous movement, so it doesn't stay rooted in the same spot."
@@ -201,8 +214,9 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-01T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/module_photoresistance.jpg",
@@ -216,8 +230,9 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-08T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "video",
         "src": "assets/medias/3servos_leg.mp4",
@@ -231,8 +246,9 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-20T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/beta_robot_plant.jpg",
@@ -246,8 +262,9 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-04-25T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/frame_robot_plant.jpg",
@@ -265,8 +282,9 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-05-03T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "video",
         "src": "assets/medias/first_walk.mp4",
@@ -284,8 +302,9 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-05-07T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/stability_issue.png",
@@ -299,8 +318,9 @@
       "tags": [
         "Legs Day Project - Plant Edition"
       ],
+      "icon":"assets/img/picto_leg.png",
       "date": "2025-05-15T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "video",
         "src": "assets/medias/second_walk_1.mp4",
@@ -314,8 +334,9 @@
       "tags": [
         "Second left hand"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-06-16T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/cardboard_hand.jpg",
@@ -329,8 +350,9 @@
       "tags": [
         "Second left hand"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-07-01T22:00:00.000Z",
-      "layout": "left",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/proto1_hand.jpg",
@@ -344,8 +366,9 @@
       "tags": [
         "Second left hand"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-07-14T22:00:00.000Z",
-      "layout": "right",
+      "layout": "full",
       "media": {
         "type": "image",
         "src": "assets/medias/calibrage_hand.jpg",
@@ -359,6 +382,7 @@
       "tags": [
         "Second left hand"
       ],
+      "icon":"assets/img/picto_hand.png",
       "date": "2025-07-17T22:00:00.000Z",
       "layout": "left",
       "media": {

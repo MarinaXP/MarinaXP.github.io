@@ -26,7 +26,7 @@ async function loadArticlesData() {
         tags: ["erreur"],
         date: "2024-07-20",
         layout: "full",
-        text: "Impossible de charger les articles. Veuillez vérifier que le fichier articles-data.json existe dans le dossier assets/datas/"
+        text: "Impossible de charger les articles."
       }],
       en: [{
         id: 1,
@@ -34,7 +34,7 @@ async function loadArticlesData() {
         tags: ["error"],
         date: "2024-07-20",
         layout: "full",
-        text: "Unable to load articles. Please check that the articles-data.json file exists in the assets/datas/ folder"
+        text: "Unable to load articles."
       }]
     };
     isDataLoaded = true;
@@ -185,7 +185,7 @@ function populateTagFilter() {
   const texts = {
     fr: {
       allProjects: 'Tous les projets',
-      blogTitle: 'LES ACTUS PROJETS',
+      blogTitle: 'Quoi de neuf ?',
       dateDesc: 'Plus récent',
       dateAsc: 'Plus ancien',
       author: 'Auteur > Marina XP',
@@ -194,7 +194,7 @@ function populateTagFilter() {
     },
     en: {
       allProjects: 'All projects',
-      blogTitle: 'PROJECT SYNC',
+      blogTitle: 'What\'s new ?',
       dateDesc: 'Newest first',
       dateAsc: 'Oldest first',
       author: 'Author > Marina XP',
@@ -261,9 +261,21 @@ function formatDate(dateString) {
 }
 
 function createArticleHTML(article) {
+  // Le nom du projet vient maintenant du premier tag
+  const projectName = article.tags && article.tags.length > 0 ? article.tags[0] : 'Projet';
+
   const contentClass = article.layout === 'full' 
     ? 'content-layout-full' 
     : `content-layout-${article.layout}`;
+
+  let iconHTML = '';
+  if (article.icon) {
+    iconHTML = `
+      <div class="article-icon">
+        <img src="${article.icon}" alt="Pictogramme ${projectName}" />
+      </div>
+    `;
+  }
 
   let mediaHTML = '';
   if (article.media) {
@@ -300,21 +312,22 @@ function createArticleHTML(article) {
     actionsHTML += '</div>';
   }
 
+  // NOTE : La structure est modifiée ici pour correspondre à l'image
   return `
     <article class="article">
       <div class="article-header">
-        <h3 class="article-title">${article.title}</h3>
+        ${iconHTML}
         <div class="article-meta">
-          <div class="article-tags">
-            ${article.tags ? article.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
-          </div>
+          <span class="tag">${projectName}</span>
           <div class="article-date">${formatDate(article.date)}</div>
         </div>
       </div>
+
       <div class="article-content">
         <div class="${contentClass}">
           ${mediaHTML}
           <div class="article-text">
+            <h3 class="article-title">${article.title}</h3>
             <p>${article.text}</p>
             ${actionsHTML}
           </div>
