@@ -844,6 +844,22 @@ header::before {
 .blog-title{
   color: var(--bg-dark);
 }
+
+
+.media-square {
+  width: 100%;
+  height: 95%;
+}
+
+.media-rectangle {
+  width: 100%;
+  height: 380px;
+}
+
+.media-portrait {
+  width: 100%;
+  height: 420px;
+}
   /* ___________________ */
   /* Footer */
   /* ___________________ */
