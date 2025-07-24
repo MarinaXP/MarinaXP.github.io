@@ -190,7 +190,8 @@ function populateTagFilter() {
       dateAsc: 'Plus ancien',
       author: 'Auteur > Marina XP',
       footerDescription: 'Trash2Tech est une expérience pour rendre la robotique accessible, prouvant qu\'il est possible de concevoir des outils électroniques fonctionnels à partir de matériel de récupération et de composants économiques.',
-      githubTitle: 'Rejoignez-moi sur GitHub'
+      githubTitle: 'Rejoignez-moi sur GitHub',
+      from: 'Du :'
     },
     en: {
       allProjects: 'All projects',
@@ -199,7 +200,8 @@ function populateTagFilter() {
       dateAsc: 'Oldest first',
       author: 'Author > Marina XP',
       footerDescription: 'Trash2Tech is an experience to make robotics accessible, proving that it is possible to design functional electronic tools from salvaged materials and economical components.',
-      githubTitle: 'Join me on GitHub'
+      githubTitle: 'Join me on GitHub', 
+      from: 'From :'
     }
   };
   
@@ -229,6 +231,9 @@ function populateTagFilter() {
   
   const githubTitle = document.getElementById('github-title');
   if (githubTitle) githubTitle.textContent = currentTexts.githubTitle;
+
+  const from = document.getElementById('from');
+  if (from) from.textContent = currentTexts.from;
 }
 
 function filterAndSortArticles() {
