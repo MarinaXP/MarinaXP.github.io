@@ -135,7 +135,7 @@
       "id": 9,
       "title": "Nouvelle idée = nouveau projet ",
       "tags": [
-        "2 mains gauche"
+        "J'ai 2 mains gauche"
       ],
       "icon":"assets/img/picto_hand.png",
       "date": "2025-06-16T22:00:00.000Z",
@@ -151,7 +151,7 @@
       "id": 10,
       "title": "Prototypage en cours",
       "tags": [
-        "2 mains gauche"
+        "J'ai 2 mains gauche"
       ],
       "icon":"assets/img/picto_hand.png",
       "date": "2025-07-01T22:00:00.000Z",
@@ -167,7 +167,7 @@
       "id": 11,
       "title": "Calibrage",
       "tags": [
-        "2 mains gauche"
+        "J'ai 2 mains gauche"
       ],
       "icon":"assets/img/picto_hand.png",
       "date": "2025-07-14T22:00:00.000Z",
@@ -183,7 +183,7 @@
       "id": 12,
       "title": "La v1 est terminée, je vais pouvoir me gratter le dos comme personne",
       "tags": [
-        "2 mains gauche"
+        "J'ai 2 mains gauche"
       ],
       "icon":"assets/img/picto_hand.png",
       "date": "2025-07-17T22:00:00.000Z",
@@ -194,7 +194,28 @@
         "format": "rectangle"
       },
       "text": "Le contrôle des doigts est nickel, la main répond parfaitement aux commandes. Je suis forcément limité pour cette V1 par le manque de souplesse dans les mouvements. C'est un aspect purement mécanique, à traiter dans la V2, via probablement un mécanisme delta déporté ou une autre approche du positionnement et du mécanisme d'action des servos pour gagner en fluidité. Je releaserai bientôt le code sur GitHub."
+    },
+     {
+      "id": 13,
+      "title": "Petit proto facile à faire en 15 minutes",
+      "tags": [
+        "L'appareil Anti-Ouille"
+      ],
+      "icon":"assets/img/picto_bat.png",
+      "date": "2025-08-01T22:00:00.000Z",
+      "layout": "full",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/proto_anti-ouille.mp4",
+        "format": "rectangle"
+      },
+      "text": "L'idée est toute simple : concevoir une aide à la navigation qui utilise des vibrations pour vous aider à « sentir » les objets, de la même manière qu'une chauve-souris utilise l'écholocalisation. Comment ça marche : ce petit proto utilise un capteur à ultrasons simple pour mesurer la distance par rapport aux objets. Il traduit ensuite cette information en une série de vibrations à l'aide d'un module avec un moteur vibreur. Plus un objet est proche, plus les vibrations deviennent rapides et intenses. un système assez intuitif : vous sentez le danger avant de le voir.",
+      "cta": {
+        "url": "https://github.com/MarinaXP/TheAnti-OuchDevice",
+        "text": "Voir le repo"
+      }
     }
+  
   ],
   "en": [
     {
@@ -391,6 +412,26 @@
         "format": "rectangle"
       },
       "text": "The finger control is spot-on, the hand responds perfectly to commands. I am necessarily limited in this V1 by the lack of flexibility in the movements. This is a purely mechanical issue to be addressed in V2, probably via a remote delta mechanism or another approach to the positioning and action mechanism of the servos to gain fluidity. I will release the code on GitHub soon."
+    },
+    {
+      "id": 13,
+      "title": "Easy 15-minute project",
+      "tags": [
+        "The Anti-Ouch Device"
+      ],
+      "icon":"assets/img/picto_bat.png",
+      "date": "2025-08-01T22:00:00.000Z",
+      "layout": "full",
+      "media": {
+        "type": "video",
+        "src": "assets/medias/proto_anti-ouille.mp4",
+        "format": "rectangle"
+      },
+      "text": "The idea is very simple: to design a navigation aid that uses vibrations to help you feel objects, much like a bat uses echolocation. How it works: This little prototype uses a simple ultrasonic sensor to measure the distance to objects. It then translates this information into a series of vibrations using a module with a vibration motor. The closer an object gets, the faster and more intense the vibrations become. It's a very intuitive system: you feel the danger before you see it.",
+      "cta": {
+        "url": "https://github.com/MarinaXP/TheAnti-OuchDevice",
+        "text": "Check the repo"
+      }
     }
   ]
 }
