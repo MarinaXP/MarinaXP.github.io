@@ -209,7 +209,7 @@
         "src": "assets/medias/proto_anti-ouille.mp4",
         "format": "rectangle"
       },
-      "text": "L'idée est toute simple : concevoir une aide à la navigation qui utilise des vibrations pour vous aider à « sentir » les objets, de la même manière qu'une chauve-souris utilise l'écholocalisation. Comment ça marche : ce petit proto utilise un capteur à ultrasons simple pour mesurer la distance par rapport aux objets. Il traduit ensuite cette information en une série de vibrations à l'aide d'un module avec un moteur vibreur. Plus un objet est proche, plus les vibrations deviennent rapides et intenses. un système assez intuitif : vous sentez le danger avant de le voir.",
+      "text": "L'idée est toute simple : concevoir une aide à la navigation qui utilise des vibrations pour aider à sentir les objets, de la même manière qu'une chauve-souris utilise l'écholocalisation. Comment ça marche : ce petit proto utilise un capteur à ultrasons simple pour mesurer la distance par rapport aux objets. Il traduit ensuite cette information en une série de vibrations à l'aide d'un module avec un moteur vibreur. Plus un objet est proche, plus les vibrations deviennent rapides et intenses. un système assez intuitif : vous sentez le danger avant de le voir.",
       "cta": {
         "url": "https://github.com/MarinaXP/TheAnti-OuchDevice",
         "text": "Voir le repo"
